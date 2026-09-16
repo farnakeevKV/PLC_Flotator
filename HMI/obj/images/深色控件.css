@@ -1,0 +1,1488 @@
+/*-- 所有样式属性说明
+	color:#ffffff;  文本颜色：颜色色值
+	background:#32333F;  背景颜色：颜色HEX色值
+	background:rgba(255,255,255,0);  背景颜色：rgb色值（红色，绿色，蓝色，不透明度）
+	background:transparent;  背景颜色：透明
+	background:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #64697B, stop:1 #3E4252);  背景颜色：从（0,0）至（0,1），由色值#64697B至色值#3E4252渐变色
+	background-color:#32333F;  背景颜色，background-color与background在设置颜色时使用类似
+	border:1px solid #64697B;  边框：大小 实线型 颜色HEX色值
+	border-left:0px solid #B9C2D5;  左侧边框
+	border-right:0px solid #B9C2D5;  右侧边框
+	border-top:0px solid #B9C2D5;  上侧边框
+	border-bottom:0px solid #B9C2D5;  下侧边框
+	border-radius:2px;  边框圆角：大小
+	font:26px;  字号：大小s
+	margin:2px;  外边距：大小
+	padding:0px 8px;  内边距：上下边距大小 左右边距大小
+--*/
+
+QSSWidget,
+QSSFrame,
+QSSTextBrowser,
+QSSPlainTextEdit {
+    border:1px solid #adb1c2;
+}
+
+/*------------ 数值IO域 字符IO域样式 ------------*/
+/*-- 默认样式 --*/
+QSSLineEdit {
+    border:1px solid #64697B;
+    color:#FFFFFF;
+    border-radius:2px;
+    background:#32333F;
+}
+
+/*-- 鼠标悬浮样式 --*/
+QSSLineEdit:hover {
+    border:1px solid #3E73B9;
+}
+
+/*-- 焦点/按下样式 --*/
+QSSLineEdit:focus,
+QSSLineEdit:pressed {
+    border:2px solid #3399FF;
+}
+
+/*-- 禁用样式 --*/
+QSSLineEdit:disabled {
+    background:#32333F;
+    border:1px solid #555969;
+    color:#8A8A8A;
+}
+
+/*------------ 按钮样式 ------------*/
+/*-- 默认样式 --*/
+QSSPushButton,
+QSSButton#QSSButton_Type {
+    border:1px solid #8D97AC;
+    color:#ffffff;
+    border-radius:2px;
+    background:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #64697B, stop:1 #3E4252);
+}
+
+/*-- 鼠标悬浮样式 --*/
+QSSPushButton:hover,
+QSSButton#QSSButton_Type:hover {
+    border:1px solid #8D97AC;
+    background:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #8D97AC, stop:0.5 #8D97AC, stop:1 #64697B);
+}
+
+/*-- 选中/焦点/按下样式 --*/
+QSSPushButton:checked,
+QSSPushButton:focus,
+QSSPushButton:pressed,
+QSSButton#QSSButton_Type:checked,
+QSSButton#QSSButton_Type:focus,
+QSSButton#QSSButton_Type:pressed {
+    border:1px solid #8D97AC;
+    background:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #3E4252, stop:1 #64697B);
+}
+
+/*-- 禁用样式 --*/
+QSSPushButton:disabled,
+QSSButton#QSSButton_Type:disabled {
+    color:#8A8A8A;
+    border:1px solid #515660;
+    background:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #414450, stop:1 #2E303B);
+}
+
+/*------------ 按钮样式2-用于弹窗确认按钮 -------------*/
+/*-- 默认样式 --*/
+QSSPushButton.primary,
+QSSButton.primary {
+    border:1px solid #3399FF;
+    color:#FFFFFF;
+    border-radius:2px;
+    background:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #3399FF, stop:1 #2A5AB0);
+}
+
+/*-- 鼠标悬浮样式 --*/
+QSSPushButton.primary:hover,
+QSSButton.primary:hover {
+    border:1px solid #3399FF;
+    background:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #7FC1F3, stop:1 #3399FF);
+}
+
+/*-- 选中/焦点/按下样式 --*/
+QSSPushButton.primary:checked,
+QSSPushButton.primary:focus,
+QSSPushButton.primary:pressed,
+QSSButton.primary:checked,
+QSSButton.primary:focus,
+QSSButton.primary:pressed {
+    border:1px solid #3399FF;
+    background:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #2A5AB0, stop:1 #438FEC);
+}
+
+/*-- 禁用样式 --*/
+QSSPushButton.primary:disabled,
+QSSButton.primary:disabled {
+    color:#8A8A8A;
+    border:1px solid #24578A;
+    background:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #245688, stop:1 #1F3864);
+}
+
+/*------------ 文本域样式 ------------*/
+/*-- 默认样式 --*/
+QSSLabel {
+    color:#ffffff;
+    background:transparent;
+}
+
+/*-- 按下样式 --*/
+QSSLabel:pressed {
+    color:#ffffff;
+    background:transparent;
+}
+
+/*-- 禁用样式 --*/
+QSSLabel:disabled {
+    color:#8A8A8A;
+}
+
+/*------------ ProgressBar样式 ------------*/
+/*-- 默认样式 --*/
+QSSProgressBar {
+    border:1px solid #adb1c2;
+    color:#1e1e1e;
+    text-align:center;
+    background:#ffffff;
+}
+
+QSSProgressBar::chunk {
+    background-color:#ccd4ff;
+}
+
+/*-- 禁用样式 --*/
+QSSProgressBar:disabled {
+    border:1px solid #dedede;
+    color:#999999;
+    text-align:center;
+    background:#f0f0f0;
+}
+
+QSSProgressBar::chunk:disabled {
+    background-color:#ccd4ff;
+}
+
+/*------------符号IO域样式------------*/
+/*-- 符号IO域输入框样式 --*/
+/*-- 默认样式 --*/
+QSSComboBox {
+    border:1px solid #64697B;
+    background:#32333F;
+    color:#ffffff;
+    border-radius:2px;
+}
+
+/*-- 鼠标悬浮样式 --*/
+QSSComboBox:hover {
+    border:1px solid #3E73B9;
+}
+
+/*-- 焦点样式 --*/
+QSSComboBox:focus {
+    border:1px solid #8D97AC;
+}
+
+/*-- 禁用样式 --*/
+QSSComboBox:disabled {
+    background:#32333F;
+    border:1px solid #555969;
+    color:#8A8A8A;
+}
+
+/*-- 符号IO域下拉按钮样式 --*/
+/*-- 默认样式 --*/
+QSSComboBox::drop-down {
+    background-color:rgba(0, 0, 0, 0);
+    border-left:0px solid #B9C2D5;
+    subcontrol-position:top right;
+    width:36px;
+    border-top-right-radius:2px;
+    border-bottom-right-radius:2px;
+}
+
+/*-- 鼠标悬浮/焦点样式 --*/
+QSSComboBox::drop-down:hover,
+QSSComboBox::drop-down:focus {
+    background-color:rgba(0, 0, 0, 0);
+}
+
+/*-- 禁用样式 --*/
+QSSComboBox::drop-down:disabled {
+    background-color:rgba(0, 0, 0, 0);
+}
+
+/*-- 符号IO域下拉按钮图标样式 --*/
+QSSComboBox::down-arrow {
+    background-image:url(://images/drop_down_white_arrow.svg);
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+/*-- 符号IO域下拉列表样式 --*/
+QSSListView,
+QSSListWidget {
+    color:#ffffff;
+    border-radius:2px;
+    border:1px solid #8D97AC;
+    background:#32333F;
+}
+
+/*-- 下拉列表行-默认样式 --*/
+QSSListView::item,
+QSSListWidget::item {
+    height:36px;
+}
+
+/*-- 下拉列表行-选中样式 --*/
+QSSListView::item:selected,
+QSSListWidget::item:selected {
+    color:#ffffff;
+    background:#246BB2;
+}
+
+/*-- 下拉列表行-鼠标悬浮样式 --*/
+QSSListView::item:hover,
+QSSListWidget::item:hover {
+    background:#64697B;
+}
+
+/*------------通用滚动条样式------------*/
+/*-- 竖直滚动条整体样式 --*/
+QSSScrollBar:vertical {
+    width:32px;
+    background:#32333F;
+    margin-top:32px;
+    margin-bottom:32px;
+    border:1px solid #8D97AC;
+}
+
+/*-- 竖直滚动条拖动按钮样式 --*/
+/*-- 默认样式 --*/
+QSSScrollBar::handle:vertical {
+    border:1px solid #64697B;
+    border-radius:4px;
+    background-color:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #828694, stop:1 #676A77);
+    background-image:url(://images/scrollBar_v_light.svg);
+    background-position:center;
+    background-repeat:no-repeat;
+    min-height:30px;
+    margin:2px;
+}
+
+/*-- 鼠标悬浮样式 --*/
+QSSScrollBar::handle:vertical:hover {
+    background-color:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #8D97AC, stop:1 #64697B);
+    background-image:url(://images/scrollBar_v_light.svg);
+    background-position:center;
+    background-repeat:no-repeat;
+    border-color:#8D97AC;
+}
+
+/*-- 按下样式 --*/
+QSSScrollBar::handle:vertical:pressed {
+    background:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #676A77, stop:1 #828694);
+    background-image:url(://images/scrollBar_v_light.svg);
+    background-position:center;
+    background-repeat:no-repeat;
+    border-color:#8D97AC;
+}
+
+/*-- 禁用样式 --*/
+QSSScrollBar::handle:vertical:disabled {
+    background:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #414450, stop:1 #2E303B);
+    background-image:url(://images/scrollBar_v_light.svg);
+    background-position:center;
+    background-repeat:no-repeat;
+    border-color:#515660;
+}
+
+/*-- 竖直滚动条上按钮样式 --*/
+QSSScrollBar::sub-line:vertical {
+    width:30px;
+    height:30px;
+    subcontrol-position:top;
+    subcontrol-origin:margin;
+    border:1px solid #8D97AC;
+    background-color:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #64697B, stop:1 #3E4252);
+    background-image:url(://images/drop_up_light_arrow.svg);
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+/*-- 竖直滚动条下按钮样式 --*/
+QSSScrollBar::add-line:vertical {
+    width:30px;
+    height:30px;
+    subcontrol-position:bottom;
+    subcontrol-origin:margin;
+    border:1px solid #8D97AC;
+    background-color:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #64697B, stop:1 #3E4252);
+    background-image:url(://images/drop_down_light_arrow.svg);
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+/*-- 竖直滚动条上按钮-鼠标悬浮样式 --*/
+QSSScrollBar::sub-line:vertical:hover {
+    background:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #8D97AC, stop:0.5 #8D97AC, stop:1 #64697B);
+    background-image:url(://images/drop_up_light_arrow.svg);
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+/*-- 竖直滚动条下按钮-鼠标悬浮样式 --*/
+QSSScrollBar::add-line:vertical:hover {
+    background:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #8D97AC, stop:0.5 #8D97AC, stop:1 #64697B);
+    background-image:url(://images/drop_down_light_arrow.svg);
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: none;
+}
+
+/*-- 水平滚动条整体样式 --*/
+QSSScrollBar:horizontal {
+    height:32px;
+    background:#32333F;
+    margin-left:32px;
+    margin-right:32px;
+    border:1px solid #8D97AC;
+}
+
+/*-- 水平滚动条拖动按钮样式 --*/
+/*-- 默认样式 --*/
+QSSScrollBar::handle:horizontal {
+    border:1px solid #64697B;
+    border-radius:4px;
+    background-color:qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #828694, stop:1 #676A77);
+    background-image:url(://images/scrollBar_h_light.svg);
+    background-position:center;
+    background-repeat:no-repeat;
+    min-width:30px;
+    margin:2px;
+}
+
+/*-- 鼠标悬浮样式 --*/
+QSSScrollBar::handle:horizontal:hover {
+    background:qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #8D97AC, stop:1 #64697B);
+    background-image:url(://images/scrollBar_h_light.svg);
+    background-position:center;
+    background-repeat:no-repeat;
+    border-color:#8D97AC;
+}
+
+/*-- 按下样式 --*/
+QSSScrollBar::handle:horizontal:pressed {
+    background:qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #8D97AC, stop:1 #64697B);
+    background-image:url(://images/scrollBar_h_light.svg);
+    background-position:center;
+    background-repeat:no-repeat;
+    border-color:#8D97AC;
+}
+
+/*-- 禁用样式 --*/
+QSSScrollBar::handle:horizontal:disabled {
+    background:qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #8D97AC, stop:1 #64697B);
+    background-image:url(://images/scrollBar_h_light.svg);
+    background-position:center;
+    background-repeat:no-repeat;
+    border-color:#515660;
+}
+
+/*-- 水平滚动条左按钮样式 --*/
+QSSScrollBar::sub-line:horizontal {
+    width:30px;
+    height:30px;
+    subcontrol-position:left;
+    subcontrol-origin:margin;
+    border:1px solid #8D97AC;
+    background-color:qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #64697B, stop:1 #3E4252);
+    background-image:url(://images/drop_left_light_arrow.svg);
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+/*-- 水平滚动条右按钮样式 --*/
+QSSScrollBar::add-line:horizontal {
+    width:30px;
+    height:30px;
+    subcontrol-position:right;
+    subcontrol-origin:margin;
+    border:1px solid #8D97AC;
+    background-color:qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #64697B, stop:1 #3E4252);
+    background-image:url(://images/drop_right_light_arrow.svg);
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+/*-- 水平滚动条左按钮-鼠标悬浮样式 --*/
+QSSScrollBar::sub-line:horizontal:hover {
+    background:qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #8D97AC, stop:0.5 #8D97AC, stop:1 #64697B);
+    background-image:url(://images/drop_left_light_arrow.svg);
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+/*-- 水平滚动条右按钮-鼠标悬浮样式 --*/
+QSSScrollBar::add-line:horizontal:hover {
+    background:qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #8D97AC, stop:0.5 #8D97AC, stop:1 #64697B);
+    background-image:url(://images/drop_right_light_arrow.svg);
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+    background: none;
+}
+
+/*------------通用弹窗样式------------*/
+/*-- 弹窗整体样式 --*/
+QSSDialog,
+CustomDialog{
+    border:1px solid #8D97AC;
+    border-radius:4px;
+}
+
+/*-- 弹窗关闭按钮样式 --*/
+/*-- 默认样式 --*/
+QSSPushButton[QSSDialog=CloseBtn] {
+    border:0px solid #FFFFFF;
+    background:url(://images/dialog-close-white.svg) no-repeat center center;
+    border-radius:16px;
+}
+
+/*-- 鼠标悬浮样式 --*/
+QSSPushButton[QSSDialog=CloseBtn]:hover {
+    background:#3E4252 url(://images/dialog-close-white.svg) no-repeat center center;
+}
+
+/*-- 禁用样式 --*/
+QSSPushButton[QSSDialog=CloseBtn]:disabled {
+    background:#244D95;
+}
+
+/*-- 弹窗标题栏样式 --*/
+QSSLabel#title {
+    border:1px solid #8D97AC;
+    border-bottom:0px;
+    border-top-right-radius:4px;
+    border-top-left-radius:4px;
+    padding-left:16px;
+    font:bold 16px;
+    color:#FFFFFF;
+    background-color:#32333F;
+}
+
+/*-- 配方视图弹窗整体样式 --*/
+QSSDialog#RecipeNewRecordDig {
+    background-color:#3E4252;
+    color:#FFFFFF;
+}
+
+QSSLabel#RecipeNewRecordLabel {
+    background-color:#32333F;
+    color:#FFFFFF;
+}
+
+
+/*-- 用户登录弹窗整体样式 --*/
+QSSDialog#LogonDialogBg {
+    background-color:#3E4252;
+    color:#FFFFFF;
+}
+
+/*-- 用户视图编辑弹窗整体样式 --*/
+QSSDialog#UserDialogBg {
+    background-color:#3E4252;
+    color:#FFFFFF;
+}
+
+QGroupBox#QGroupBoxFinger {
+    border: 1px solid #2176D9;
+    color: #FF6600;
+}
+
+QSSLabel.QSSLabelFinger:enabled {
+    background: yellow;
+    border: 1px solid #FF6600;
+    color: #FF6600;
+}
+
+/*------------TreeView样式------------*/
+QSSTreeView {
+    border: 1px solid #a9a9a9;
+}
+
+/*------------CheckBox样式------------*/
+/*-- 默认样式 --*/
+QSSCheckBox {
+    color: #424242;
+    background-color: transparent;
+}
+
+/*-- 禁用样式 --*/
+QSSCheckBox:disabled {
+    color: rgb(80, 80, 80);
+}
+
+QSSCheckBox::indicator {
+    background: transparent;
+    border-width: 0px;
+}
+
+/*-- 未选-默认样式 --*/
+QSSCheckBox::indicator::unchecked {
+    border-image: url(:/images/un_checkbox.png) 0 72 0 0;
+}
+
+/*-- 未选-鼠标悬浮样式 --*/
+QSSCheckBox::indicator:unchecked:hover {
+    border-image: url(:/images/un_checkbox.png) 0 48 0 24;
+}
+
+/*-- 未选-按下样式 --*/
+QSSCheckBox::indicator:unchecked:pressed {
+    border-image: url(:/images/un_checkbox.png) 0 24 0 48;
+}
+
+/*-- 未选-禁用样式 --*/
+QSSCheckBox::indicator:unchecked:disabled {
+    border-image: url(:/images/un_checkbox.png) 0 0 0 72;
+}
+
+/*-- 勾选-默认样式 --*/
+QSSCheckBox::indicator::checked {
+    border-image: url(:/images/checkbox.png) 0 72 0 0;
+}
+
+/*-- 勾选-鼠标悬浮样式 --*/
+QSSCheckBox::indicator:checked:hover {
+    border-image: url(:/images/checkbox.png) 0 48 0 24;
+}
+
+/*-- 勾选-按下样式 --*/
+QSSCheckBox::indicator:checked:pressed {
+    border-image: url(:/images/checkbox.png) 0 24 0 48;
+}
+
+/*-- 勾选-禁用样式 --*/
+QSSCheckBox::indicator:checked:disabled {
+    border-image: url(:/images/checkbox.png) 0 0 0 72;
+}
+
+/*------------配方视图样式------------*/
+/*-- 配方视图整体样式 --*/
+RecipeView {
+    border:0px solid rgb(207, 213, 216);
+    background:#3E4252;
+    border-radius:4px;
+}
+
+/*-- 配方视图下拉框样式 --*/
+QSSComboBox[Recipe=ComboBox] {
+    height:36px;
+}
+
+/*-- 配方视图各个按钮图标 --*/
+QSSPushButton[Recipe=helpButton] {
+    qproperty-icon: url(:/images/item_help_light.svg);
+    qproperty-iconSize:24px;
+}
+
+QSSPushButton[Recipe=newButton] {
+    qproperty-icon: url(:/images/item_new_light.svg);
+    qproperty-iconSize:24px;
+}
+
+QSSPushButton[Recipe=saveButton] {
+    qproperty-icon: url(:/images/item_save_light.svg);
+    qproperty-iconSize:24px;
+}
+
+QSSPushButton[Recipe=deleteButton] {
+    qproperty-icon: url(:/images/item_delete_light.svg);
+    qproperty-iconSize:24px;
+}
+
+QSSPushButton[Recipe=synchronizeButton] {
+    qproperty-icon: url(:/images/item_synchronize_light.svg);
+    qproperty-iconSize:24px;
+}
+
+QSSPushButton[Recipe=renameButton] {
+    qproperty-icon: url(:/images/item_rename_light.svg);
+    qproperty-iconSize:24px;
+}
+
+QSSPushButton[Recipe=saveAsButton] {
+    qproperty-icon: url(:/images/item_save_as_light.svg);
+    qproperty-iconSize:24px;
+}
+
+QSSPushButton[Recipe=fromPlcButton] {
+    qproperty-icon: url(:/images/item_from_plc_light.svg);
+    qproperty-iconSize:24px;
+}
+
+QSSPushButton[Recipe=toPlcButton] {
+    qproperty-icon: url(:/images/item_to_plc_light.svg);
+    qproperty-iconSize:24px;
+}
+
+QSSPushButton[Recipe=printButton] {
+    qproperty-icon: url(:/images/item_print_light.svg);
+    qproperty-iconSize:24px;
+}
+
+/*-- 配方视图文本样式 --*/
+QSSLineEdit[Recipe=Label] {
+    height:36px;
+}
+
+/*-- 配方视图按钮样式 --*/
+/*-- 默认样式 --*/
+QSSPushButton[Recipe=Button] {
+    qproperty-iconSize:24px;
+    border:1px solid #8D97AC;
+    border-radius:4px;
+    border:1px solid #8D97AC;
+}
+
+/*-- 鼠标悬浮样式 --*/
+QSSPushButton[Recipe=Button]:hover {
+    background:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #8D97AC, stop:0.5 #8D97AC, stop:1 #64697B);
+    border:1px solid #8D97AC;
+}
+
+/*-- 焦点样式 --*/
+QSSPushButton[Recipe=Button]:focus {
+    border:1px solid #8D97AC;
+    background:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #3E4252, stop:1 #64697B);
+}
+
+/*-- 按下样式 --*/
+QSSPushButton[Recipe=Button]:pressed {
+    border:1px solid #8D97AC;
+    background-color:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #3E4252, stop:1 #64697B);
+}
+
+/*-- 选中样式 --*/
+QSSPushButton[Recipe=Button]:checked {
+    border:1px solid #8D97AC;
+    background-color:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #3E4252, stop:1 #64697B);
+}
+
+/*-- 配方视图信息栏样式 --*/
+/*-- 提示信息 --*/
+QSSLineEdit[Recipe=Info] {
+    background:#64697B;
+    border:1px solid #8D97AC;
+    color:#ffffff;
+    padding-left:20px;
+}
+
+/*-- 错误信息 --*/
+QSSLineEdit[Recipe=Error] {
+    background:#64697B;
+    border:1px solid #8D97AC;
+    padding-left:20px;
+    color:#ffffff;
+}
+
+/*-- 完成信息 --*/
+QSSLineEdit[Recipe=Success] {
+    background:#64697B;
+    border:1px solid #8D97AC;
+    padding-left: 20px;
+    color:#ffffff;
+}
+
+QHeaderView[Recipe=TableVerticalView] {
+    qproperty-defaultSectionSize: 36;
+}
+
+EntryLineEdit {
+    color: #000000;
+    background-color: #FFFFFF;
+    border: 1px solid #D9DDE0;
+}
+
+EntryLineEdit:hover,
+EntryLineEdit:focus {
+    border: 1px solid #295AB0;
+}
+
+/*------------通用表格样式------------*/
+/*-- 表格整体样式 --*/
+QSSTableView {
+    gridline-color:#64697B;
+    selection-background-color:#246BB2;
+    selection-color:#FFFFFF;
+    color:#FFFFFF;
+    border:1px solid #8D97AC;
+    background:#32333F;
+    alternate-background-color:#3E4252;
+    border-radius: 4px;
+}
+
+.style_QSSTableView {
+    gridline-color:#64697B;
+    selection-background-color:#246BB2;
+    selection-color:#FFFFFF;
+    color:#FFFFFF;
+    border:1px solid #8D97AC;
+    background:#32333F;
+    alternate-background-color:#3E4252;
+    border-radius: 4px;
+}
+
+QHeaderView#SimulatorTable_vhead,
+QHeaderView#SimulatorTable_hhead,
+QHeaderView#QSSTableView_vHeader,
+QHeaderView#QSSTableView_hHeader,
+QHeaderView#hHeader{
+    background: transparent;
+}
+
+/*-- 表格首行样式 --*/
+QHeaderView#SimulatorTable_vhead:horizontal,
+QHeaderView#SimulatorTable_hhead:horizontal,
+QHeaderView#QSSTableView_vHeader:horizontal,
+QHeaderView#QSSTableView_hHeader:horizontal,
+QHeaderView#hHeader:horizontal {
+    qproperty-defaultSectionSize: 40;
+    background:#64697B;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+QHeaderView#SimulatorTable_vhead::section:horizontal,
+QHeaderView#SimulatorTable_hhead::section:horizontal,
+QHeaderView#QSSTableView_vHeader::section:horizontal,
+QHeaderView#QSSTableView_hHeader::section:horizontal,
+QHeaderView#hHeader::section:horizontal {
+    border:1px solid #8D97AC;
+    background-color:#64697B;
+    color:#ffffff;
+}
+
+/*-- 表格首行-禁用样式 --*/
+QHeaderView#SimulatorTable_vhead:horizontal:disabled,
+QHeaderView#SimulatorTable_hhead:horizontal:disabled,
+QHeaderView#QSSTableView_vHeader:horizontal:disabled,
+QHeaderView#QSSTableView_hHeader:horizontal:disabled,
+QHeaderView#hHeader:horizontal:disabled {
+    background-color:#64697B;
+    color:#8A8A8A;
+}
+
+QHeaderView#SimulatorTable_vhead::section:horizontal,
+QHeaderView#SimulatorTable_hhead::section:horizontal,
+QHeaderView#QSSTableView_vHeader::section:horizontal,
+QHeaderView#QSSTableView_hHeader::section:horizontal,
+QHeaderView#SimulatorTable_vhead::section,
+QHeaderView#SimulatorTable_hhead::section,
+QHeaderView#QSSTableView_vHeader::section,
+QHeaderView#QSSTableView_hHeader::section,
+QHeaderView#hHeader::section:horizontal,
+QHeaderView#hHeader::section {
+    border-width: 0px 1px 1px 0px;
+    height: 36px;
+}
+
+/*-- 表格首列样式 --*/
+QHeaderView#SimulatorTable_vhead::section:vertical,
+QHeaderView#SimulatorTable_hhead::section:vertical,
+QHeaderView#QSSTableView_vHeader::section:vertical,
+QHeaderView#QSSTableView_hHeader::section:vertical,
+QHeaderView#hHeader::section:vertical,
+QHeaderView#vHeader::section {
+    border-width: 0px 1px 1px 0px;
+    height: 50px;
+}
+
+/*-- 表格首行-鼠标悬浮样式 --*/
+QHeaderView#SimulatorTable_vhead::section:horizontal:hover,
+QHeaderView#SimulatorTable_hhead::section:horizontal:hover,
+QHeaderView#QSSTableView_vHeader::section:horizontal:hover,
+QHeaderView#QSSTableView_hHeader::section:horizontal:hover,
+QHeaderView#hHeader::section:horizontal:hover {
+    background-color:#797F93;
+    color:#ffffff;
+}
+
+/*-- 表格首行-按下样式 --*/
+QHeaderView#SimulatorTable_vhead::section:horizontal:pressed,
+QHeaderView#SimulatorTable_hhead::section:horizontal:pressed,
+QHeaderView#QSSTableView_vHeader::section:horizontal:pressed,
+QHeaderView#QSSTableView_hHeader::section:horizontal:pressed,
+QHeaderView#hHeader::section:horizontal:pressed {
+    background-color:#8D97AC;
+    color:#ffffff;
+}
+
+/*-- 表格首行-禁用样式 --*/
+QHeaderView#SimulatorTable_vhead::section:horizontal:disabled,
+QHeaderView#SimulatorTable_hhead::section:horizontal:disabled,
+QHeaderView#QSSTableView_vHeader::section:horizontal:disabled,
+QHeaderView#QSSTableView_hHeader::section:horizontal:disabled,
+QHeaderView#hHeader::section:horizontal:disabled {
+    background-color:#64697B;
+    color:#8A8A8A;
+}
+
+/*-- 表格首列样式 --*/
+QHeaderView#SimulatorTable_vhead::section:vertical,
+QHeaderView#SimulatorTable_hhead::section:vertical,
+QHeaderView#QSSTableView_vHeader::section:vertical,
+QHeaderView#QSSTableView_hHeader::section:vertical,
+QHeaderView#hHeader::section:vertical {
+    border:1px solid #8D97AC;
+    background-color:#64697B;
+    color:#ffffff;
+}
+
+/*-- 表格首列-禁用样式 --*/
+QHeaderView#SimulatorTable_vhead:vertical:disabled,
+QHeaderView#SimulatorTable_hhead:vertical:disabled,
+QHeaderView#QSSTableView_vHeader:vertical:disabled,
+QHeaderView#QSSTableView_hHeader:vertical:disabled,
+QHeaderView#hHeader:vertical:disabled {
+    background-color:#64697B;
+    color:#8A8A8A;
+}
+
+/*-- 表格首行样式 --*/
+QHeaderView#SimulatorTable_vhead::section:horizontal,
+QHeaderView#SimulatorTable_hhead::section:horizontal,
+QHeaderView#QSSTableView_vHeader::section:horizontal,
+QHeaderView#QSSTableView_hHeader::section:horizontal,
+QHeaderView#SimulatorTable_vhead::section,
+QHeaderView#SimulatorTable_hhead::section,
+QHeaderView#QSSTableView_vHeader::section,
+QHeaderView#QSSTableView_hHeader::section,
+QHeaderView#hHeader::section:horizontal,
+QHeaderView#hHeader::section {
+    border-width: 0px 1px 1px 0px;
+    height: 36px;
+}
+
+/*-- 表格首列样式 --*/
+QHeaderView#SimulatorTable_vhead::section:vertical,
+QHeaderView#SimulatorTable_hhead::section:vertical,
+QHeaderView#QSSTableView_vHeader::section:vertical,
+QHeaderView#QSSTableView_hHeader::section:vertical,
+QHeaderView#hHeader::section:vertical,
+QHeaderView#vHeader::section:vertical {
+    border-width: 0px 1px 1px 0px;
+    height: 50px;
+}
+
+/*-- 表格首列-鼠标悬浮样式 --*/
+QHeaderView#SimulatorTable_vhead::section:vertical:hover,
+QHeaderView#SimulatorTable_hhead::section:vertical:hover,
+QHeaderView#QSSTableView_vHeader::section:vertical:hover,
+QHeaderView#QSSTableView_hHeader::section:vertical:hover,
+QHeaderView#hHeader::section:vertical:hover {
+    background-color:#797F93;
+    color:#ffffff;
+}
+
+/*-- 表格首列-鼠标按下样式 --*/
+QHeaderView#SimulatorTable_vhead::section:vertical:pressed,
+QHeaderView#SimulatorTable_hhead::section:vertical:pressed,
+QHeaderView#QSSTableView_vHeader::section:vertical:pressed,
+QHeaderView#QSSTableView_hHeader::section:vertical:pressed,
+QHeaderView#hHeader::section:vertical:pressed {
+    background-color:#8D97AC;
+    color:#ffffff;
+}
+
+/*-- 表格首列-禁用样式 --*/
+QHeaderView#SimulatorTable_vhead::section:vertical:disabled,
+QHeaderView#SimulatorTable_hhead::section:vertical:disabled,
+QHeaderView#QSSTableView_vHeader::section:vertical:disabled,
+QHeaderView#QSSTableView_hHeader::section:vertical:disabled,
+QHeaderView#hHeader::section:vertical:disabled {
+    background-color:#64697B;
+    color:#8A8A8A;
+}
+
+/*------------用户视图样式------------*/
+/*-- 用户视图左上角按钮样式 --*/
+QSSPushButton[corner=cornerBtn] {
+    border: 0px solid #dddddd;
+    background: transparent;
+    height: 32px;
+}
+
+/*------------数据记录视图------------*/
+DataView {
+    border:0px solid #FFFFFF;
+    border-radius:6px;
+    background:#3E4252;
+    color:#ffffff;
+    padding:12px;
+
+}
+
+/*--数据记录视图表格左上角样式--*/
+RecordTableView QTableCornerButton::section {
+    background:transparent;
+    border-color: #8D97AC;
+    border-left: none;
+    border-top: none;
+}
+
+/*-- 数据记录视图信息栏样式 --*/
+/*-- 提示信息 --*/
+QSSLineEdit[DataView=Info] {
+    background: #D3DBE9;
+    border: 1px solid #B9C2D5;
+    color: #0C1A34;
+    padding-left: 20px;
+}
+
+/*-- 错误信息 --*/
+QSSLineEdit[DataView=Error] {
+    background: #D3DBE9;
+    border: 1px solid #B9C2D5;
+    padding-left: 20px;
+    color: #0C1A34;
+}
+
+/*-- 完成信息 --*/
+QSSLineEdit[DataView=Success] {
+    background: #D3DBE9;
+    border: 1px solid #B9C2D5;
+    padding-left: 20px;
+    color: #0C1A34;
+}
+
+QGroupBox[DataView=groupBox] {
+    border:0px solid #FFFFFF;
+    color:#ffffff;
+    qproperty-minimumHeight:80;
+}
+
+/*-- 数据记录视图下拉框样式 --*/
+QSSComboBox[DataView=ComboBox] {
+    height: 32px;
+}
+
+/*-- 数据记录视图时间日期域样式 --*/
+CalendarLineEdit[DataView=LineEdit] {
+    height: 32px;
+}
+
+CalendarLineEdit[OperationRecordView=LineEdit] {
+    height: 32px;
+}
+
+/*-- 数据记录视图时间日期域右侧按钮样式 --*/
+#timeBtn {
+    border: 1px solid #B9C2D5;
+    background:url(:/images/item_timer_light.svg) no-repeat center;
+    background-color:#32333F;
+    height: 33px;
+    width: 34px;
+}
+
+/*-- 数据记录视图各功能按钮样式 --*/
+QSSPushButton[DataView=viewInfoButton] {
+    qproperty-icon: url(:/images/item_search_light.svg);
+    qproperty-iconSize:24px;
+    height:36px;
+    width:36px;
+}
+
+QSSPushButton[DataView=updateButton] {
+    qproperty-icon: url(:/images/item_update_light.svg);
+    qproperty-iconSize:24px;
+    height:36px;
+    width:36px;
+}
+
+QSSPushButton[DataView=viewPrevButton] {
+    qproperty-icon: url(:/images/item_pre_page_light.svg);
+    qproperty-iconSize:24px;
+    height:36px;
+    width:36px;
+}
+
+QSSPushButton[DataView=viewNextButton] {
+    qproperty-icon: url(:/images/item_next_page_light.svg);
+    qproperty-iconSize:24px;
+    height:36px;
+    width:36px;
+}
+
+QSSPushButton[DataView=printButton] {
+    qproperty-icon: url(:/images/item_print_light.svg);
+    qproperty-iconSize:24px;
+    height:36px;
+    width:36px;
+}
+
+/*-- 数据记录视图时间日期域展开面板样式 --*/
+CalendarDialog {
+    border:1px solid #8D97AC;
+    border-radius:6px;
+    background:#3E4252;
+}
+
+Calendar[CalendarDialog=Calendar] {
+    border-top-left-radius:6px;
+    border-top-right-radius:6px;
+    background:#32333F;
+}
+
+/*-- 时间日期域面板头部样式 --*/
+QSSLabel[CalendarItem=header] {
+    background:transparent;
+    color:#D2D5E8;
+}
+
+/*-- 时间日期域面板按钮-默认样式 --*/
+QSSPushButton.CalendarDatetime {
+    border:0px;
+    border-radius:0px;
+    background:#32333F;
+    color:#ffffff;
+    width:40px;
+    height:40px;
+}
+
+/*-- 时间日期域面板按钮-鼠标悬浮样式 --*/
+QSSPushButton.CalendarDatetime:hover {
+    background:#374F73;
+}
+
+/*-- 时间日期域面板按钮-按下样式 --*/
+QSSPushButton.CalendarDatetime:pressed {
+    background:#374F73;
+}
+
+/*-- 时间日期域面板按钮-禁用样式 --*/
+QSSPushButton.CalendarDatetime:disabled {
+    color:#8A8A8A;
+}
+
+QSSPushButton.current,
+QSSPushButton.current:hover,
+QSSPushButton.current:pressed {
+    background:#246BB2;
+    color:#FFFFFF;
+}
+
+/*------------操作记录视图------------*/
+OperationRecordView {
+    border:0px solid #FFFFFF;
+    border-radius:6px;
+    background:#3E4252;
+    color:#000000;
+    padding:12px;
+}
+
+QSSLabel[OperationRecordView=startTimeLable],
+QSSLabel[OperationRecordView=endTimelabel] {
+    background:transparent;
+}
+
+QSSPushButton[OperationRecordView=searchButton] {
+    qproperty-icon: url(:/images/item_search_light.svg);
+    qproperty-iconSize:24px;
+    height:40px;
+}
+
+/*------------键盘样式------------*/
+/*------------数值键盘样式------------*/
+NumberInputPanel {
+    padding:2px;
+    color:#FFFFFF;
+    border-radius:4px;
+    background:#1E1E24;
+    border:1px solid #8D97AC;
+}
+
+/*-- 上下限样式 --*/
+#limitLabel {
+    color:#FFFFFF;
+    border:0px;
+    border-top-left-radius:4px;
+    border-top-right-radius:4px;
+    padding:4px 8px;
+    background:#64697B;
+    font:16px;
+}
+
+/*-- 输入区域样式 --*/
+#inputEdit {
+    color:#FFFFFF;
+    border:2px solid #64697B;
+    border-radius:4px;
+    margin:2px;
+    margin-top:4px;
+    padding:0px 8px;
+    background:#32333F;
+    font:26px;
+    height:48px;
+}
+
+/*-- 普通按键样式 --*/
+/*-- 默认样式 --*/
+KeyButton {
+    color:#FFFFFF;
+    border:1px solid #8D97AC;
+    border-radius:6px;
+    margin:2px;
+    background:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #64697B, stop:1 #3E4252);
+    font:24px;
+    min-width:60px;
+    min-height:56px;
+}
+
+/*-- 鼠标悬浮样式 --*/
+KeyButton:hover {
+    border:1px solid #8D97AC;
+    background:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #8D97AC, stop:0.5 #8D97AC, stop:1 #64697B);
+}
+
+/*-- 按下样式 --*/
+KeyButton:pressed {
+    border:1px solid #8D97AC;
+    background:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #3E4252, stop:1 #64697B);
+}
+
+/*-- 禁用样式 --*/
+KeyButton:disabled {
+    color:#8A8A8A;
+    border:1px solid #515660;
+    background:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #414450, stop:1 #2E303B);
+}
+
+/*-- 控制按键样式 --*/
+/*-- 默认样式 --*/
+ControlButton {
+    color:#FFFFFF;
+    border:1px solid #8D97AC;
+    border-radius:6px;
+    margin:2px;
+    background-color:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #8D97AC, stop:1 #5F6373);
+    font: 20px;
+    font-weight: bold;
+    min-width:60px;
+    min-height:56px;
+}
+
+/*-- 鼠标悬浮样式 --*/
+ControlButton:hover {
+    border:1px solid #8D97AC;
+    background-color:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #A9B1C0, stop:1 #878A96);
+}
+
+/*-- 按下样式 --*/
+ControlButton:pressed {
+    border:1px solid #8D97AC;
+    background-color:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #5F6373, stop:1 #8D97AC);
+}
+
+/*-- 禁用样式 --*/
+ControlButton:disabled {
+    color:#8A8A8A;
+    border:1px solid #565B68;
+    background-color:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #565A68, stop:1 #3F414C);
+}
+
+/*-- 移动按键样式 --*/
+MoveButton {
+    border:0px;
+    border-radius:6px;
+    margin:2px;
+    background:#32333F;
+    min-width:60px;
+    min-height:56px;
+}
+
+/*-- 控制按键-回退键样式 --*/
+ControlButton[NumberInput=btnBackspace] {
+    qproperty-icon: url(:/images/bsp_light.svg);
+    qproperty-iconSize:50px;
+}
+
+/*-- 控制按键-Enter键样式 --*/
+/*-- 默认样式 --*/
+ControlButton[NumberInput=btnEnter] {
+    qproperty-icon: url(:/images/enter_light_En.svg);
+    qproperty-iconSize: 50px;
+    border: 1px solid #3399FF;
+	background:qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 #3399FF, stop:1 #2A5AB0);
+}
+
+/*-- 鼠标悬浮样式 --*/
+ControlButton[NumberInput=btnEnter]:hover{
+	background:qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 #7FC1F3, stop:1 #3399FF);
+}
+
+/*-- 按下样式 --*/
+ControlButton[NumberInput=btnEnter]:pressed{
+	background:qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 #2A5AB0, stop:1 #438FEC);
+}
+
+/*-- 控制按键-清空键Clr样式 --*/
+ControlButton[NumberInput=btnDel] {
+    qproperty-icon: url(:/images/clear_light_En.svg);
+    qproperty-iconSize:50px;
+}
+
+/*-- 移动按键样式 --*/
+MoveButton[NumberInput=moveLab] {
+    background:#32333F url(:/images/move_light.svg) no-repeat center center;
+    border:0px;
+    border-radius:6px;
+}
+
+/*------------字符键盘样式------------*/
+StringInputPanel {
+    padding:2px;
+    color:#FFFFFF;
+    border-radius:4px;
+    background:#1E1E24;
+    border:1px solid #8D97AC;
+}
+
+/*-- 控制按键-回退键样式 --*/
+ControlButton[StringInput=btnBackspace] {
+    qproperty-icon: url(:/images/bsp_light.svg);
+    qproperty-iconSize:50px;
+}
+
+/*-- 控制按键-Enter键样式 --*/
+/*-- 默认样式 --*/
+ControlButton[StringInput=btnEnter] {
+    qproperty-icon: url(:/images/enter_String_En.svg);
+    qproperty-iconSize: 50px;
+    border: 1px solid #3399FF;
+/*    background:qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 #3399FF, stop:1 #2A5AB0);*/
+}
+
+/*-- 鼠标悬浮样式 --*/
+ControlButton[StringInput=btnEnter]:hover{
+	background:qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 #7FC1F3, stop:1 #3399FF);
+}
+
+/*-- 按下样式 --*/
+ControlButton[StringInput=btnEnter]:pressed{
+	background:qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 #2A5AB0, stop:1 #438FEC);
+}
+
+
+/*-- 控制按键-大小写键样式 --*/
+ControlButton[StringInput=btnCapslockA] {
+    
+    background-image:url(:/images/btnCapslock_light.svg);
+}
+
+ControlButton[StringInput=btnCapslockA]:disabled {
+
+    background-image:url(:/images/btnCapslock_light_disabled.svg);
+}
+
+ControlButton[StringInput=btnCapslock] {
+
+    background-image:url(:/images/btnCapslock_light_a.svg);
+}
+
+ControlButton[StringInput=btnCapslock]:disabled {
+
+    background-image:url(:/images/btnCapslock_light_a_disabled.svg);
+}
+
+/*-- 控制按键-空格键样式 --*/
+/*-- 默认样式 --*/
+ControlButton[StringInput=btnSpace] {
+    qproperty-icon: url(:/images/blankspace_light.svg);
+    qproperty-iconSize: 50px;
+	border:1px solid #8D97AC;
+	background:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #64697B, stop:1 #3E4252);
+}
+
+/*-- 鼠标悬浮样式 --*/
+ControlButton[StringInput=btnSpace]:hover{
+	border: 1px solid #BEDAFF;
+	background:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #8D97AC, stop:0.5 #8D97AC, stop:1 #64697B);
+}
+
+/*-- 按下样式 --*/
+ControlButton[StringInput=btnSpace]:pressed{
+	border: 1px solid #C6CDDC;
+	background:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #3E4252, stop:1 #64697B);
+}
+
+/*-- 控制按键-清空键Clr样式 --*/
+ControlButton[StringInput=btnClr] {
+    qproperty-icon: url(:/images/clear_light_En.svg);
+    qproperty-iconSize:50px;
+}
+
+/*-- 移动按键样式 --*/
+MoveButton[StringInput=moveLab] {
+    background:#32333F url(:/images/move_light.svg) no-repeat center center;
+    border:0px;
+    border-radius:6px;
+}
+
+/*------------报警条样式------------*/
+#AlarmBarFrame {
+    background: #FF3A5A;
+    color: #000000;
+    border-radius: 0px;
+    border: 0px solid #FF3A5A;
+}
+
+/*------------进度条样式------------*/
+/*-- 默认样式 --*/
+QSSProgressBar#ProgressBarItem {
+    border: 2px solid #C6CDDC;
+    border-radius: 4px;
+    color: #000000;
+    text-align: center;
+    background-color: #C6CDDC;
+
+}
+
+/*-- 进度条内部样式 --*/
+QSSProgressBar#ProgressBarItem::chunk {
+    /*-- 默认进度条水平的样式 --*/
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #007EFF, stop:1 #4BF3FF);
+    /*-- 垂直样式 --*/
+    /*-- background:qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 #4BF3FF, stop:1 #007EFF); --*/
+    border-radius: 4px;
+}
+
+/*-- 禁用样式 --*/
+QSSProgressBar#ProgressBarItem:disabled {
+    border: 1px solid #dedede;
+    color: #999999;
+    text-align: center;
+    background: #C6CDDC;
+    border-radius: 4px;
+}
+
+QSSProgressBar#Bar {
+    border-radius: 4px;
+    background: rgb(198, 205, 220);
+    ;
+}
+
+QSSProgressBar#Bar::chunk {
+    background: rgb(51, 153, 255);
+    border-radius: 4px;
+}
+
+/*-- 字按钮样式 --*/
+QSSButton#WordButton_Type{
+    border: 1px solid #64697B;
+    border-radius: 6px;
+}
+
+/*-- 字按钮禁用样式 --*/
+QSSButton#WordButton_Type:disabled{
+    border: 1px solid #3C3F48;
+}
+
+/*-- 位按钮样式 --*/
+QSSButton#BitButton_Type{
+    border: 1px solid #8D97AC;
+    border-radius: 6px;
+}
+
+/*-- 位按钮禁用样式 --*/
+QSSButton#BitButton_Type:disabled{
+    border: 1px solid #515660;
+}
+
+/*-- 字状态显示 位状态显示样式 --*/
+QSSButton#BitIndicator_Type,
+QSSButton#WordIndicator_Type{
+    border: 0px;
+    border-radius: 0px;
+}
+
+QSSPushButton#buttonItem:hover  {
+    border:1px solid #8D97AC;
+    color:#ffffff;
+    border-radius:2px;
+    background:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #64697B, stop:1 #3E4252);
+}
+
+.IoMonitorView
+{
+	border: 1px solid #8D97AC;
+	border-radius: 6px;
+	background: #3E4252;
+}
+
+.AlarmQueryView
+{
+	border: 1px solid #8D97AC;
+	color:#ffffff;
+	border-radius: 6px;
+	background: #3E4252;
+}
+
+.AlarmQueryView_groupBox,
+.FileBrowserView,
+.RemoteDBView,
+.FileBrowserView_TreeView,
+.RemoteDBView_TableView,
+.LockDialog,
+QSSMessageBox,
+UserReportView
+{
+	color:#ffffff;
+	background: #3E4252;
+}
+
+QSSDialog,
+CustomDialog{
+    border:1px solid #8D97AC;
+    border-radius:4px;
+        color:#ffffff;
+        background: #3E4252;
+}
+
+#CustomDialog_Listview
+{
+     color:#FFFFFF;
+     background-color: #3E4252;
+     alternate-background-color: #32333F
+}
+
+.VncClientView,
+RfbView,
+#VncScrollArea
+{
+    background: #3E4252;
+    border: 1px solid #3E4252;
+    color:#ffffff;
+    border-radius: 4px;
+}
+/*--------------IpLineEdit-----------------*/
+#VncClientIpEdit
+{
+    background-color: #3E4252;
+    border: 1px solid #8D97AC;
+    border-radius: 4px;
+}
+#VncViewipEdit,
+#VncViewDot
+{
+    background-color: #3E4252;
+    color:#ffffff;
+}

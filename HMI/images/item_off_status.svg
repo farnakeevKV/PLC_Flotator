@@ -1,0 +1,16 @@
+<svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<radialGradient id="paint_radial_2943_7109_0" cx="0.000000" cy="0.000000" r="1.000000" gradientUnits="userSpaceOnUse" gradientTransform="translate(14 7.75) rotate(123.69) scale(14.4222 14.4222)">
+			<stop stop-color="#FFFFFF"/>
+			<stop offset="0.745308" stop-color="#A0A1A0"/>
+			<stop offset="1.000000" stop-color="#828282"/>
+		</radialGradient>
+	</defs>
+	<rect id="指示灯灭" width="24.000000" height="24.000000" fill="#FFFFFF" fill-opacity="0"/>
+	<path id="椭圆 374" d="M0 12C0 5.37 5.37 0 12 0C18.62 0 24 5.37 24 12C24 18.62 18.62 24 12 24C5.37 24 0 18.62 0 12Z" fill="#69DF12" fill-opacity="0" fill-rule="evenodd"/>
+	<path id="椭圆 374" d="M0 12C0 5.37 5.37 0 12 0C18.62 0 24 5.37 24 12C24 18.62 18.62 24 12 24C5.37 24 0 18.62 0 12Z" fill="url(#paint_radial_2943_7109_0)" fill-opacity="1.000000" fill-rule="evenodd"/>
+	<path id="椭圆 374" d="M12 0C5.37 0 0 5.37 0 12C0 18.62 5.37 24 12 24C18.62 24 24 18.62 24 12C24 5.37 18.62 0 12 0ZM7.96 2.26C9.2 1.75 10.55 1.5 12 1.5C13.44 1.5 14.79 1.75 16.03 2.26C17.26 2.78 18.39 3.55 19.42 4.57C20.44 5.6 21.21 6.73 21.73 7.96C22.24 9.2 22.5 10.55 22.5 12C22.5 13.44 22.24 14.79 21.73 16.03C21.21 17.26 20.44 18.39 19.42 19.42C18.39 20.44 17.26 21.21 16.03 21.73C14.79 22.24 13.44 22.5 12 22.5C10.55 22.5 9.2 22.24 7.96 21.73C6.73 21.21 5.6 20.44 4.57 19.42C3.55 18.39 2.78 17.26 2.26 16.03C1.75 14.79 1.5 13.44 1.5 12C1.5 10.55 1.75 9.2 2.26 7.96C2.78 6.73 3.55 5.6 4.57 4.57C5.6 3.55 6.73 2.78 7.96 2.26Z" fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"/>
+</svg>

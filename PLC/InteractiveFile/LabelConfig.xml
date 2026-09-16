@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Symbolconfiguration>
+	<TypeList>
+		<TypeSimple name="T_REAL" size="4" bitsize="32" iecname="REAL"/>
+		<TypeSimple name="T_INT" size="2" bitsize="16" iecname="INT"/>
+		<TypeSimple name="T_BOOL" size="1" bitsize="1" iecname="BOOL"/>
+		<TypeUserDef name="T_STR_DRV_AI_IN" size="36" bitsize="288" typeclass="Userdef" pouclass="STRUCTURE" iecname="STR_DRV_AI_IN">
+			<UserDefElement iecname="Min_In" type="T_REAL" byteoffset="0" bitoffset="0"/>
+			<UserDefElement iecname="Max_In" type="T_REAL" byteoffset="4" bitoffset="32"/>
+			<UserDefElement iecname="Min_Out" type="T_REAL" byteoffset="8" bitoffset="64"/>
+			<UserDefElement iecname="Max_Out" type="T_REAL" byteoffset="12" bitoffset="96"/>
+			<UserDefElement iecname="SP_HH" type="T_REAL" byteoffset="16" bitoffset="128"/>
+			<UserDefElement iecname="SP_H" type="T_REAL" byteoffset="20" bitoffset="160"/>
+			<UserDefElement iecname="SP_L" type="T_REAL" byteoffset="24" bitoffset="192"/>
+			<UserDefElement iecname="SP_LL" type="T_REAL" byteoffset="28" bitoffset="224"/>
+			<UserDefElement iecname="Mode" type="T_INT" byteoffset="32" bitoffset="256"/>
+			<UserDefElement iecname="Inverse" type="T_BOOL" byteoffset="34" bitoffset="272"/>
+			<UserDefElement iecname="Use_Filter" type="T_BOOL" byteoffset="34" bitoffset="273"/>
+		</TypeUserDef>
+	</TypeList>
+	<NodeList>
+		<Node name="AI_1_in" type="Str_DRV_AI_In"/>
+		<Node name="AI_2_in" type="Str_DRV_AI_In"/>
+	</NodeList>
+</Symbolconfiguration>

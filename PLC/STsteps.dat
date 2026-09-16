@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<version>1.0</version>
+	<company>Inovance</company>
+	<Node><strProgName>_CALL_FB__STB48_00000000</strProgName>
+		<strCaption>_STB48</strCaption>
+		<strInst>Cycle_Z1</strInst>
+		<strTrueInst>Cycle_Z1</strTrueInst>
+		<offSetLine>41</offSetLine>
+		<startNum>1</startNum>
+		<endNum>0</endNum>
+		<endNumOffSet>1</endNumOffSet>
+		<orgLine>1</orgLine>
+		<uFileID>1</uFileID>
+		<InvalidLine>7,15,23,26,34,41,44</InvalidLine>
+		</Node>
+	<Node><strProgName>_CALL_FB__STB48_00000001</strProgName>
+		<strCaption>_STB48</strCaption>
+		<strInst>Cycle_Z2</strInst>
+		<strTrueInst>Cycle_Z2</strTrueInst>
+		<offSetLine>41</offSetLine>
+		<startNum>1</startNum>
+		<endNum>0</endNum>
+		<endNumOffSet>1</endNumOffSet>
+		<orgLine>1</orgLine>
+		<uFileID>2</uFileID>
+		<InvalidLine>7,15,23,26,34,41,44</InvalidLine>
+		</Node>
+	</root>

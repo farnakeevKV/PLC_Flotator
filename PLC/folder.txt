@@ -1,0 +1,57 @@
+AutoShop
+	1
+PROG
+ROOT
+	FILE	MAIN.LD
+	FILE	SBR_AI.LD
+	FILE	SBR_Alarm.LD
+	FILE	SBR_Device.LD
+	FILE	SBR_ModeSetup.LD
+	FILE	SBR_SCADA.LD
+	FILE	SBR_Sensors.LD
+FB
+ROOT
+	FILE	Change_quantity.FB
+	FILE	Choise_Pump_Main.FB
+	FILE	Choise_Pump_Status.FB
+	FILE	DRV_MDA_1.FB
+	FILE	FB_Alarm_pump.FB
+	FILE	Joint_MDA.FB
+	FILE	Mode.FB
+	FILE	Mode_1.FB
+	FILE	Numb_Res_Req_Pump.FB
+	FILE	Optimal_MD_Array.FB
+	FILE	Rotate.FB
+	FILE	Rotate_1.FB
+	FILE	Rotate_Op_Time.FB
+	FILE	Rotate_Status.FB
+	FOLDER	DRV_Devices
+		FILE	DRV_DO_KC.FB
+		FILE	DRV_MD.FB
+		FILE	DRV_MDA.FB
+		FILE	DRV_Z.FB
+		FILE	DRV_Z_my.FB
+	FOLDER	DRV_Low
+		FILE	DRV_AI.FB
+		FILE	DRV_Flow.FB
+	FOLDER	Flotator
+		FILE	Alternative_Alarm_Work.FB
+		FILE	Cycle_work.FB
+		FILE	FB.FB
+	FOLDER	MyFolder
+		FILE	Manage_with_delay.FB
+	FOLDER	System
+		FILE	IP_Change.FB
+		FILE	ModBus_RTU_SetHMI.FB
+		FILE	Op_Time.FB
+		FILE	Timer_H.FB
+		FILE	Timer_M.FB
+		FILE	Timer_S.FB
+		FILE	Timer_S_my.FB
+FC
+ROOT
+	FILE	Calc_D.FC
+	FILE	Converter.FC
+	FILE	Inverse.FC
+	FILE	optimal_pumps_massiv.FC
+	FILE	time_to_ms.FC
